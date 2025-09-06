@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fake Telegram Login (Educational Demo)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 300px;
+    }
+    img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+    input, button {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    button {
+      background: #0088cc;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0077b5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Logo">
+    <h2>Telegram</h2>
+    <p>Please confirm your country code and enter your phone number.</p>
+    
+    <input id="country" type="text" placeholder="Country (e.g. Nigeria)">
+    <input id="phone" type="text" placeholder="Your phone number">
+    <input id="code" type="text" placeholder="Enter code">
+    
+    <button onclick="fakeSubmit()">Next</button>
+  </div>
+  <script>
+    function fakeSubmit() {
+      const country = document.getElementById("country").value;
+      const phone = document.getElementById("phone").value;
+      const code = document.getElementById("code").value;
+
+      alert("⚠️ PHISHING SIMULATION ⚠️\n\n" +
+            "Here’s what you just entered:\n" +
+            "🌍 Country: " + country + "\n" +
+            "📱 Phone: " + phone + "\n" +
+            "🔑 Code: " + code + "\n\n" +
+            "👉 In a real phishing site, this data would already be in a hacker’s hands!\n\n" +
+            "Always check the URL before entering details.");
+    }
+  </script>
+</body>
+</html>
